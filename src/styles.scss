@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+main {
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &.login {
+    margin-top: 50%;
+
+    form {
+      input[type="text"], input[type="password"] {
+        width: 150px;
+      }
+
+      [type="button"], [type="submit"] {
+        padding: 4px 10px;
+      }
+    }
+  }
+}
