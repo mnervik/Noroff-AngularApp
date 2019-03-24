@@ -1,35 +1,26 @@
-<div id="api">
-  <h1>Data from Api's</h1>
+<main>
+  <h1>Cats and Dogs</h1>
+  <hr/>
+
   <div class="card">
-    <img class="card-img-top" src="{{randomDog}}"/>
-    <h1 class="card-title">Random Dog</h1>
+    <img class="card-img-top" src="{{api.dog}}"/>
+    <h2 class="card-title">Random Dog</h2>
 
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{randomFox}}"/>
+    <img class="card-img-top" src="{{api.fox}}"/>
     <h2 class="card-title">Random Fox</h2>
 
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{randomShibe}}"/>
+    <img class="card-img-top" src="{{api.shibe}}"/>
     <h2 class="card-title">Random Shibe</h2>
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="{{catCode}}"/>
-    <h2 class="card-title">Cat Code</h2>
+    <img class="card-img-top" src="{{api.cat}}"/>
+    <h2 class="card-title">Cat Status Code</h2>
   </div>
-</div>
-
-
-
-<!--<div class="[ card ]" *ngFor="let weather of weatherDetail">
-      Sky Conditions: {{ weather.weather_state_name }}<br />
-      Min Tempreture: {{ weather.min_temp }}<br />
-      Max Tempreture: {{ weather.max_temp }}<br />
-      Actual Tempreture: {{ weather.the_temp }}<br />
-      Date Created: {{ weather.created }}<br />
-      Humidity: {{ weather.humidity }}<br />
-</div>-->
+</main>

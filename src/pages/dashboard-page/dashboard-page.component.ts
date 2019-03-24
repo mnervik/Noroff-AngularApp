@@ -10,8 +10,12 @@ import 'rxjs';
   providers: [ApiService]
 })
 export class DashboardPageComponent implements OnInit {
-
-  public randomDog; randomFox; randomShibe; catCode;
+  public api = {
+    dog: '',
+    fox: '',
+    shibe: '',
+    cat: ''
+  };
 
   constructor(protected router: Router, protected apiService: ApiService) {
   }
@@ -23,20 +27,19 @@ export class DashboardPageComponent implements OnInit {
 
     this.apiService.getRandomDog().subscribe(data => {
       // @ts-ignore
-      this.randomDog = data.message;
+      this.api.dog = data.message;
     });
 
-    this.apiService.getRandomFox().subscribe(data=>{
+    this.apiService.getRandomFox().subscribe(data => {
       // @ts-ignore
-      this.randomFox = data.image;
+      this.api.fox = data.image;
     });
 
-    this.apiService.getRandomShibe().subscribe(data=>{
-      // @ts-ignore
-      this.randomShibe = data[0];
+    this.apiService.getRandomShibe().subscribe(data => {
+      this.api.shibe = data[0];
     });
 
     /* This api does not require json */
-    this.catCode = this.apiService.getCatCode();
+    this.api.cat = <string>this.apiService.getCatCode();
   }
 }
